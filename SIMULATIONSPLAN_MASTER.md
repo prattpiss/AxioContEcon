@@ -42,7 +42,7 @@ Jeder Ergebnisbericht: `S{NR}_{LABEL}_ERGEBNIS.md`
 | Nr | ID | Gleichung(en) | Typ | Beschreibung | Status |
 |----|----|--------------|-----|--------------|--------|
 | S01 | I.1 | $\dot{w}_i = y_i - c_i + \sum_k \theta_{ik}\dot{p}_k + rb_i$ | ODE | Individuelle Vermögensbilanz: 3 Agentenklassen (W, U, B), Prüfung Nullsumme Bewertungsterme | ✅ |
-| S02 | I.2 | $\dot{W} = Y - C$ | ODE | Aggregierte Vermögenserhaltung: Summation von S01, Prüfung $\sum\theta\dot{p}=0$, $\sum rb=0$ | ☐ |
+| S02 | I.2 | $\dot{W} = Y - C$ | ODE | Aggregierte Vermögenserhaltung: Summation von S01, Prüfung $\sum\theta\dot{p}=0$, $\sum rb=0$ | ✅ |
 | S03 | P.3 | $\dot{n}_k^{(\alpha)} = q_k - c_k - \delta_\alpha n_k - \nabla\cdot j + \text{Konversion}$ | PDE/ODE | Güterbestandsdynamik für alle 6 Klassen, Konversionsmatrix $\lambda_{\alpha\beta}$ | ☐ |
 | S04 | I.4 | $\partial m/\partial t + \nabla\cdot j_m = g - \tau$ | PDE | Gelderhaltung: Kompaktform $\dot{M} = g_Z + g_B\cdot\text{Kredit} - \tau$ | ☐ |
 | S05 | M.1 | $\Delta M^{\text{endo}} = m_{\text{mult}}\cdot\Delta B$ | Algebraisch | Geldschöpfung + Bilanzsymmetrie $\Delta M = \Delta L$ | ☐ |
