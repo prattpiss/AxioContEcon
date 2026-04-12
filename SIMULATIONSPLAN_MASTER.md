@@ -60,25 +60,27 @@ Jeder Ergebnisbericht: `S{NR}_{LABEL}_ERGEBNIS.md`
 | S03b | S03 | Ohne Konversion ($\lambda_{\alpha\beta}=0$) | Isolierte Güterklassen |
 | S07a | S07 | Solow-Spezialfall $I=sY$ | Exogene Sparquote |
 
-### Kap. 5 — Preise und Flüsse (6 Gleichungen)
+### Kap. 5 — Preise und Flüsse (6 Gleichungen, Reihenfolge exakt nach Monographie §5.1–§5.6)
 
-| Nr | ID | Gleichung(en) | Typ | Beschreibung | Status |
-|----|----|--------------|-----|--------------|--------|
-| S08 | II.1 | $p_k^* = MC_k(q_k^*, w, r)$ | Algebraisch | Langfristiger Preisanker bei verschiedenen Produfktionsfunktionen | ☐ |
-| S09 | II.2 | $\dot{p}_k = \lambda_k^{-1}(D_k-S_k) + \eta_k p_k - \varphi_k/(\mathcal{I}_k+\varepsilon)$ | ODE | Preisdynamik: 3 Terme einzeln und zusammen | ☐ |
-| S10 | II.3 | $\dot{\mathcal{I}}_k = D_\mathcal{I}\nabla^2\mathcal{I}_k - \omega\mathcal{I}_k + S_k$ | PDE | Informationsfluss (Kurzform) | ☐ |
-| S11 | II.4 | $\dot{p}_{k/j}$ | ODE | Relative Preise zweier Güter | ☐ |
-| S12 | F.1 | $j_{n,k} = -D_k\nabla\mu_k^{\text{eff}}$ | Flussgleichung | Güterfluss auf Potentialgradienten | ☐ |
-| S13 | F.2 | $\mu^{\text{eff}} = p + \alpha_H\bar{p}^H + \psi/(\mathcal{I}+\varepsilon)$ | Algebraisch | Effektives Potential: Aufschlüsselung der 3 Terme | ☐ |
+| Nr | ID | Gleichung(en) | Typ | Monographie § | Beschreibung | Status |
+|----|----|--------------|-----|--------------|--------------|--------|
+| S08 | II.2 | $\dot{p}_k = \lambda_k^{-1}(D_k-S_k) + \eta_k p_k - \varphi_k/(\mathcal{I}_k+\varepsilon)$ | ODE | §5.1 | Fundamentale Preisdynamik: 3 Komponenten (Walras + Erwartungsdrift + Illiquidität), Prop. 5.1 | ☐ |
+| S09 | F.2 | $\mu_k^{\text{eff}} = p_k + \alpha_H\bar{p}_k^{\text{Herding}} + \psi_k/(\mathcal{I}_k+\varepsilon)$ | Algebraisch | §5.2 | Effektives Potential: 3 Schichten (objektiv + Herding + Illiquidität), Prop. 5.2 | ☐ |
+| S10 | F.1 | $\vec{j}_{n_k} = -D_k\,\nabla\mu_k^{\text{eff}}$ | PDE/Fluss | §5.3 | Allgemeiner Güterfluss (A4-Anwendung): Füllt $\nabla\cdot\vec{j}$ in P.3. Expandiert: $\vec{j} = -D_k[\nabla p_k + \alpha_H\nabla\bar{p}^H + \nabla(\psi/(\mathcal{I}+\varepsilon))]$ | ☐ |
+| S11 | II.1 | $\vec{j}_w = -D_w\,\nabla\Phi_w + \vec{v}_w\,\rho_w$ | PDE/Fluss | §5.4 | Vermögensfluss: Diffusion auf $\Phi_w(h(\rho_w), V_w)$ + Konvektion. Lucas-Paradox | ☐ |
+| S12 | II.4 | $\vec{j}_m = -D_m\,\nabla r + \sigma_m\,\vec{E}_{\text{Kredit}}$ | PDE/Fluss | §5.5 | Geldfluss: Zinsgradient + Kreditfeld. Füllt $\nabla\cdot\vec{j}_m$ in I.4. Zwei Regime (zins- vs. kreditgetrieben) | ☐ |
+| S13 | II.3 | $\dot{\mathcal{I}}_k = D_\mathcal{I}\nabla^2\mathcal{I}_k - \omega\mathcal{I}_k + \mathcal{S}_k - \mu\mathcal{I}_k^3 + \beta|\dot{p}_k|$ | PDE | §5.6 | Informationsfluss: Diffusion + Zerfall + Quellen + Sättigung + Preis-Feedback. Vorschau Kap. 7 | ☐ |
 
 **Sonderfälle Kap. 5:**
-| Nr | Basiert auf | Sonderfall |
-|----|------------|------------|
-| S09a | S09 | $\eta_k=0, \varphi_k=0$ → reiner Walras-Tâtonnement |
-| S09b | S09 | $\mathcal{I}\to\infty$ → EMH-Limit (keine Informationsfriktionen) |
-| S09c | S09 | $D_k=S_k$ → Gleichgewichtsprüfung: $\dot{p}=\eta p$ |
-| S12a | S12+F.2 | $\alpha_H=0, \psi=0$ → Neoklassischer Arbitragefluss |
-| S12b | S12+F.2 | Nur Herding ($\alpha_H\gg 1$) → Herdenfluss |
+| Nr | Basiert auf | Sonderfall | Beschreibung |
+|----|------------|------------|--------------|
+| S08a | S08 | $\eta_k=0, \varphi_k=0$ | Reiner Walras-Tâtonnement |
+| S08b | S08 | $\mathcal{I}\to\infty$ | EMH-Limit (keine Informationsfriktionen) |
+| S08c | S08 | $D_k=S_k$ | Gleichgewichtsprüfung: $\dot{p}=\eta p$ (reine Inflationsdrift) |
+| S10a | S10+F.2 | $\alpha_H=0, \psi=0$ | Neoklassischer Arbitragefluss (A4 pur) |
+| S10b | S10+F.2 | Nur Herding ($\alpha_H\gg 1$) | Herdenfluss ohne Fundamentals |
+| S10c | S10+P.3 | Gekoppelt: F.1 → $\nabla\cdot\vec{j}$ in P.3 | **Volle räumliche Gütererhaltung** (das fehlende ∇·j aus S03) |
+| S12a | S12+I.4 | Gekoppelt: II.4 → $\nabla\cdot\vec{j}_m$ in I.4 | **Volle räumliche Gelderhaltung** (das fehlende ∇·j aus S04) |
 
 ### Kap. 6 — Entscheidungen (25 Gleichungen)
 
