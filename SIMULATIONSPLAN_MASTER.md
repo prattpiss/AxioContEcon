@@ -68,7 +68,7 @@ Jeder Ergebnisbericht: `S{NR}_{LABEL}_ERGEBNIS.md`
 | S09 | F.2 | $\mu_k^{\text{eff}} = p_k + \alpha_H\bar{p}_k^{\text{Herding}} + \psi_k/(\mathcal{I}_k+\varepsilon)$ | Algebraisch | §5.2 | Effektives Potential: 3 Schichten (objektiv + Herding + Illiquidität), Prop. 5.2 | ✅ |
 | S10 | F.1 | $\vec{j}_{n_k} = -D_k\,\nabla\mu_k^{\text{eff}}$ | PDE/Fluss | §5.3 | Allgemeiner Güterfluss: 1D-MOL (NX=201), 5 Regime (Diffusion/Herding/Infosog/Skalentrennung/Stochastisch), V1 Masse 2.8e-3, V2 σ/μ=1e-4, V3 Richtung 100%, V4 Infosog Δx=-1.4km, V5+V6, Preismodell p∝n^γ (Standortdruck) | ✅ |
 | S11 | II.1 | $\vec{j}_w = -D_w\,\nabla\Phi_w + \vec{v}_w\,\rho_w$ | PDE/Fluss | §5.4 | Vermögensfluss: 1D-MOL (NX=201), 5 Regime (Diversifikation/Lucas/Kapitalflucht/Drift/Stochastisch), V1 Masse 3.9e-3, V2 sigma/mu=0.008, V3 Lucas x_cm 29.5->26.5, V4 Flucht +3.3km, V5+V6 625pt | ✅ |
-| S12 | II.4 | $\vec{j}_m = -D_m\,\nabla r + \sigma_m\,\vec{E}_{\text{Kredit}}$ | PDE/Fluss | §5.5 | Geldfluss: Zinsgradient + Kreditfeld. Füllt $\nabla\cdot\vec{j}_m$ in I.4. Zwei Regime (zins- vs. kreditgetrieben) | ☐ |
+| S12 | II.4 | $\vec{j}_m = -D_m\,\nabla r + \sigma_m\,\vec{E}_{\text{Kredit}}$ | PDE/Fluss | §5.5 | Geldfluss: Zinsgradient + Kreditfeld. Füllt $\nabla\cdot\vec{j}_m$ in I.4. Zwei Regime (zins- vs. kreditgetrieben) | ✅ |
 | S13 | II.3 | $\dot{\mathcal{I}}_k = D_\mathcal{I}\nabla^2\mathcal{I}_k - \omega\mathcal{I}_k + \mathcal{S}_k - \mu\mathcal{I}_k^3 + \beta|\dot{p}_k|$ | PDE | §5.6 | Informationsfluss: Diffusion + Zerfall + Quellen + Sättigung + Preis-Feedback. Vorschau Kap. 7 | ☐ |
 
 **Sonderfälle Kap. 5:**
