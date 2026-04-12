@@ -10,6 +10,7 @@ import S10_F1 from './S10_F1.js';
 import S11_II1 from './S11_II1.js';
 import S12_II4 from './S12_II4.js';
 import S13_II3 from './S13_II3.js';
+import S14_U1 from './S14_U1.js';
 
 // All simulations, grouped by chapter
 export const chapters = [
@@ -40,7 +41,7 @@ export const chapters = [
     id: 6,
     title: 'Kap. 6: Quellen & Reaktionen',
     sims: [
-      { id: 'S14', eqId: 'V.1', title: 'Konsum-/Nachfragefunktion', section: '§6.1', available: false },
+      { id: 'S14', eqId: 'U.1', title: 'Nutzenordnung', section: '§6.1', available: true, config: S14_U1 },
       { id: 'S15', eqId: 'V.2', title: 'Sparfunktion', section: '§6.2', available: false },
     ],
   },

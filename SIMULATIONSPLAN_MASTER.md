@@ -86,7 +86,7 @@ Jeder Ergebnisbericht: `S{NR}_{LABEL}_ERGEBNIS.md`
 
 | Nr | ID | Gleichung(en) | Beschreibung | Status |
 |----|----|--------------|--------------|--------|
-| S14 | U.1 | $u_i = u(c_i, l_i; \gamma_i, c_i^*)$ | Nutzenfunktion: CRRA, CARA, Log, Epstein-Zin vergleichen | ☐ |
+| S14 | U.1 | $u_i = u(c_i, l_i; \gamma_i, c_i^*)$ | Nutzenfunktion: CRRA, CARA, Log, Epstein-Zin vergleichen. 6 Regime, 7/7 Val. Kausalitaet: gamma->Konsum, gamma->Portfolio, I->p_eff, Habit, Verlust-Spirale | ✅ |
 | S15 | U.2 | $\omega_{ik} = \omega(\mathcal{I}_{ik})$ | Aufmerksamkeitsgewichte: Softmax, Probit, Linear | ☐ |
 | S16 | U.3 | $p_k^{\text{eff}} = p_k(1 + \psi_k/(\mathcal{I}_k+\varepsilon))$ | Effektiver Preis vs. Information | ☐ |
 | S17 | V.1 | $\dot{c}_i = R_i \cdot c_i$, $R_i = (r-\beta_i)/\gamma_i$ | Euler-Gleichung (rationaler Konsum) | ☐ |
