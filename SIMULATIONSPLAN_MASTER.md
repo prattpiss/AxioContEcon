@@ -47,7 +47,7 @@ Jeder Ergebnisbericht: `S{NR}_{LABEL}_ERGEBNIS.md`
 | S04 | I.4 | $\partial m/\partial t + \nabla\cdot j_m = g - \tau$ | PDE | Gelderhaltung: Kompaktform $\dot{M} = g_Z + g_B\cdot\text{Kredit} - \tau$ | ✅ |
 | S05 | M.1 | $\Delta M^{\text{endo}} = m_{\text{mult}}\cdot\Delta B$ | Algebraisch | Geldschöpfung + Bilanzsymmetrie $\Delta M = \Delta L$ | ✅ (in S04) |
 | S06 | M.2 | $\sum_i b_i = 0$ | Identität | Kreditmarkt-Clearing: Prüfung in S01+S04 | ✅ (in S04) |
-| S07 | K.1 | $\dot{K}_k = I_k - \delta_k K_k$ | ODE | Kapitalakkumulation mit Konversion | ☐ |
+| S07 | K.1 | $\dot{K}_k = I_k - \delta_k K_k$ | ODE | Kapitalakkumulation mit Konversion | ✅ |
 
 **Sonderfälle Kap. 4:**
 | Nr | Basiert auf | Sonderfall | Beschreibung |
