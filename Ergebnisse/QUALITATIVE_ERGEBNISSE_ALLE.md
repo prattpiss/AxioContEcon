@@ -1,6 +1,6 @@
-# Qualitative Ergebnisse — Alle Simulationen (S01–S18)
+# Qualitative Ergebnisse — Alle Simulationen (S01–S19)
 
-> **AxioContEcon**: 16 Simulationen, 99/99 Validierungen bestanden  
+> **AxioContEcon**: 17 Simulationen, 107/107 Validierungen bestanden  
 > Stichpunktartige Zusammenfassung der qualitativen Kernbefunde
 
 ---
@@ -105,6 +105,14 @@
 - **Geldillusion × Friction:** Gleiches r_real, aber 207× verschiedener Konsum — Illusion und Friction verstärken sich
 - **Endogene Ungleichheit:** Heterogene (η,φ,I) → Gini 0.160→0.793 rein durch Wahrnehmungsdifferenzen
 - **Info-Kaskade:** I-Schock (Fake News, Zensur) propagiert über r_wahr in die Realökonomie
+
+### S19 — V.2 Psychologische Konsumverzerrung (8/8 Val)
+- **Prospect Theory verifiziert**: λ=2.25 Loss/Gain Ratio exakt; alle 5 Axiome bestätigt
+- Verlustaversion **beschleunigt Erholung**: λ=4 → 6.0t vs λ=1 → 10.5t nach Schock
+- **Information dämpft Psychologie**: I→∞ eliminiert Ψ vollständig → Ramsey-Limit
+- Gini-Verstärkung: Arme konsumieren „über Verhältnisse" (Relative Deprivation)
+- **Hedonisches Laufband**: schnelle Adaptation → Surplus→0.22 → Zufriedenheit vergänglich
+- Ψ ist **equalisierend**: Gini sinkt 0.272→0.250 (anders als V.1, das Ungleichheit verstärkt)
 
 ---
 
