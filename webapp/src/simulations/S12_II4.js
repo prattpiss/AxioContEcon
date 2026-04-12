@@ -267,7 +267,7 @@ const S12_II4 = {
       stateOverrides: { rho_m: 10 },
       paramOverrides: { D_m: 1.5, sigma_m: 20, kappa: 0.8, rho_0: 10 },
       exogOverrides: {
-        Phi_Kredit: { type: 'ramp', params: { valueStart: 8, valueEnd: 1, tStart: 0, tEnd: 1 } },
+        Phi_Kredit: { type: 'ramp', params: { vStart: 8, vEnd: 1, tStart: 0, tEnd: 100 } },
         r_base_exog: { type: 'constant', params: { value: 0.02 } },
         Q_m: { type: 'constant', params: { value: 0 } },
       },
@@ -278,9 +278,9 @@ const S12_II4 = {
       stateOverrides: { rho_m: 10 },
       paramOverrides: { D_m: 15, sigma_m: 8, kappa: 2.5, rho_0: 15 },
       exogOverrides: {
-        Phi_Kredit: { type: 'logistic', params: { yLow: 0, yHigh: 3, midpoint: 80, steepness: 0.2 } },
-        r_base_exog: { type: 'logistic', params: { yLow: 0.001, yHigh: 0.05, midpoint: 60, steepness: -0.3 } },
-        Q_m: { type: 'logistic', params: { yLow: 0, yHigh: 0.5, midpoint: 80, steepness: 0.2 } },
+        Phi_Kredit: { type: 'logistic', params: { L: 3, k: 0.2, tMid: 80, baseline: 0 } },
+        r_base_exog: { type: 'logistic', params: { L: 0.049, k: -0.3, tMid: 60, baseline: 0.001 } },
+        Q_m: { type: 'logistic', params: { L: 0.5, k: 0.2, tMid: 80, baseline: 0 } },
       },
     },
     {
@@ -289,7 +289,7 @@ const S12_II4 = {
       stateOverrides: { rho_m: 10 },
       paramOverrides: { D_m: 10, sigma_m: 10, kappa: 2.0, rho_0: 12 },
       exogOverrides: {
-        Phi_Kredit: { type: 'logistic', params: { yLow: 0.5, yHigh: 5, midpoint: 80, steepness: -0.3 } },
+        Phi_Kredit: { type: 'logistic', params: { L: 4.5, k: -0.3, tMid: 80, baseline: 0.5 } },
         r_base_exog: { type: 'constant', params: { value: 0.03 } },
         Q_m: { type: 'constant', params: { value: 0 } },
       },

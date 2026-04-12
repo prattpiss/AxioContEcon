@@ -98,7 +98,15 @@ export default function SimView({ sim }) {
     }
     exogFuncsRef.current = exogFuncs;
 
-    const y0 = sim.stateVars.map(v => initConds[v.name] ?? v.initial);
+    // Build y0: for spatial state vars, use the full NX-element initialProfile
+    let y0 = [];
+    for (const v of sim.stateVars) {
+      if (v.spatial && v.initialProfile) {
+        y0.push(...v.initialProfile);
+      } else {
+        y0.push(initConds[v.name] ?? v.initial);
+      }
+    }
     const tEval = Array.from({ length: solverSettings.nPoints }, (_, i) =>
       (i / (solverSettings.nPoints - 1)) * tMax
     );

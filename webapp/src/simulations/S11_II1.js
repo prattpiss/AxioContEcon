@@ -270,18 +270,18 @@ const S11_II1 = {
       stateOverrides: { rho_w: 10 },
       paramOverrides: { D_w: 10, alpha: 5, rho_0: 10, beta_w: 3 },
       exogOverrides: {
-        V_w: { type: 'ramp', params: { valueStart: 8, valueEnd: 2, tStart: 0, tEnd: 1 } },
+        V_w: { type: 'ramp', params: { vStart: 8, vEnd: 2, tStart: 0, tEnd: 100 } },
         v_w: { type: 'constant', params: { value: 0 } },
         S_w: { type: 'constant', params: { value: 0 } },
       },
     },
     {
       name: 'R3 Kapitalflucht',
-      description: 'V_w kollabiert bei t=80 (Institutionenkrise) → Kapital flieht nach rechts',
+      description: 'V_w räumlich: links=8 (reich), rechts=1 (arm, Krise) → Kapital akkumuliert links',
       stateOverrides: { rho_w: 10 },
       paramOverrides: { D_w: 10, alpha: 5, rho_0: 10, beta_w: 2.5 },
       exogOverrides: {
-        V_w: { type: 'step', params: { valueBefore: 8, valueAfter: 1, tSwitch: 80 } },
+        V_w: { type: 'step', params: { before: 8, after: 1, tSwitch: 50 } },
         v_w: { type: 'constant', params: { value: 0 } },
         S_w: { type: 'constant', params: { value: 0 } },
       },

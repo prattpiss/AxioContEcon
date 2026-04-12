@@ -232,7 +232,7 @@ const S09_F2 = {
       exogOverrides: {
         D: { type: 'ornsteinUhlenbeck', params: { theta: 0.2, mu: 115, sigma: 8, x0: 110, seed: 44 } },
         S: { type: 'sinusoidal', params: { offset: 100, amplitude: 3, frequency: 0.3, phase: 0 } },
-        eta: { type: 'step', params: { valueBefore: 0.02, valueAfter: 0.06, tSwitch: 20 } },
+        eta: { type: 'step', params: { before: 0.02, after: 0.06, tSwitch: 20 } },
         I: { type: 'constant', params: { value: 3 } },
         alpha_H: { type: 'logistic', params: { L: 0.8, k: 0.15, tMid: 30, baseline: 0.1 } },
         p_bar_H: { type: 'logistic', params: { L: 15, k: 0.1, tMid: 35, baseline: 2 } },

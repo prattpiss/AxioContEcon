@@ -223,7 +223,7 @@ const S10_F1 = {
       paramOverrides: { D_k: 3, alpha_H: 0.8, psi: 0.1, eps: 0.01, p0: 10, n0: 20, gamma: 0.3 },
       exogOverrides: {
         I: { type: 'constant', params: { value: 5 } },
-        p_bar_H: { type: 'ramp', params: { valueStart: 10, valueEnd: 0, tStart: 0, tEnd: 100 } },
+        p_bar_H: { type: 'ramp', params: { vStart: 10, vEnd: 0, tStart: 0, tEnd: 100 } },
         q: { type: 'constant', params: { value: 0 } },
       },
     },
@@ -233,7 +233,7 @@ const S10_F1 = {
       stateOverrides: { n: 10 },
       paramOverrides: { D_k: 4, alpha_H: 0, psi: 3, eps: 0.01, p0: 10, n0: 20, gamma: 0.3 },
       exogOverrides: {
-        I: { type: 'ramp', params: { valueStart: 10, valueEnd: 0.5, tStart: 0, tEnd: 100 } },
+        I: { type: 'ramp', params: { vStart: 10, vEnd: 0.5, tStart: 0, tEnd: 100 } },
         p_bar_H: { type: 'constant', params: { value: 0 } },
         q: { type: 'constant', params: { value: 0 } },
       },
