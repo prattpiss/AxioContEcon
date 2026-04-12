@@ -6,6 +6,7 @@
 
 import S08_II2 from './S08_II2.js';
 import S09_F2 from './S09_F2.js';
+import S10_F1 from './S10_F1.js';
 
 // All simulations, grouped by chapter
 export const chapters = [
@@ -26,7 +27,7 @@ export const chapters = [
     sims: [
       { id: 'S08', eqId: 'II.2', title: 'Fundamentale Preisdynamik', section: '§5.1', available: true, config: S08_II2 },
       { id: 'S09', eqId: 'F.2', title: 'Effektives Potential', section: '§5.2', available: true, config: S09_F2 },
-      { id: 'S10', eqId: 'F.1', title: 'Allgemeiner Güterfluss', section: '§5.3', available: false },
+      { id: 'S10', eqId: 'F.1', title: 'Allgemeiner Güterfluss', section: '§5.3', available: true, config: S10_F1 },
       { id: 'S11', eqId: 'II.1', title: 'Vermögensfluss', section: '§5.4', available: false },
       { id: 'S12', eqId: 'II.4', title: 'Geldfluss', section: '§5.5', available: false },
       { id: 'S13', eqId: 'II.3', title: 'Informationsfluss', section: '§5.6', available: false },
