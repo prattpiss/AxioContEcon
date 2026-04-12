@@ -5,6 +5,7 @@
  */
 
 import S08_II2 from './S08_II2.js';
+import S09_F2 from './S09_F2.js';
 
 // All simulations, grouped by chapter
 export const chapters = [
@@ -24,7 +25,7 @@ export const chapters = [
     title: 'Kap. 5: Preise & Flüsse',
     sims: [
       { id: 'S08', eqId: 'II.2', title: 'Fundamentale Preisdynamik', section: '§5.1', available: true, config: S08_II2 },
-      { id: 'S09', eqId: 'F.2', title: 'Effektives Potential', section: '§5.2', available: false },
+      { id: 'S09', eqId: 'F.2', title: 'Effektives Potential', section: '§5.2', available: true, config: S09_F2 },
       { id: 'S10', eqId: 'F.1', title: 'Allgemeiner Güterfluss', section: '§5.3', available: false },
       { id: 'S11', eqId: 'II.1', title: 'Vermögensfluss', section: '§5.4', available: false },
       { id: 'S12', eqId: 'II.4', title: 'Geldfluss', section: '§5.5', available: false },

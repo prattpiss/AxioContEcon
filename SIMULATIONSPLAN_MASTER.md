@@ -65,7 +65,7 @@ Jeder Ergebnisbericht: `S{NR}_{LABEL}_ERGEBNIS.md`
 | Nr | ID | Gleichung(en) | Typ | Monographie § | Beschreibung | Status |
 |----|----|--------------|-----|--------------|--------------|--------|
 | S08 | II.2 | $\dot{p}_k = \lambda_k^{-1}(D_k-S_k) + \eta_k p_k - \varphi_k/(\mathcal{I}_k+\varepsilon)$ | ODE | §5.1 | Fundamentale Preisdynamik: 5 Regime (Normal/Blase/Krise/Stagflation/GG), Prop 5.1 bestätigt, V2 Blase ε=3.7e-15, V3 Walras ε=1.1e-11, 625-Pt Sensitivität, Metadaten-Panel | ✅ |
-| S09 | F.2 | $\mu_k^{\text{eff}} = p_k + \alpha_H\bar{p}_k^{\text{Herding}} + \psi_k/(\mathcal{I}_k+\varepsilon)$ | Algebraisch | §5.2 | Effektives Potential: 3 Schichten (objektiv + Herding + Illiquidität), Prop. 5.2 | ☐ |
+| S09 | F.2 | $\mu_k^{\text{eff}} = p_k + \alpha_H\bar{p}_k^{\text{Herding}} + \psi_k/(\mathcal{I}_k+\varepsilon)$ | Algebraisch | §5.2 | Effektives Potential: 3 Schichten (objektiv + Herding + Illiquidität), Prop. 5.2 | ✅ |
 | S10 | F.1 | $\vec{j}_{n_k} = -D_k\,\nabla\mu_k^{\text{eff}}$ | PDE/Fluss | §5.3 | Allgemeiner Güterfluss (A4-Anwendung): Füllt $\nabla\cdot\vec{j}$ in P.3. Expandiert: $\vec{j} = -D_k[\nabla p_k + \alpha_H\nabla\bar{p}^H + \nabla(\psi/(\mathcal{I}+\varepsilon))]$ | ☐ |
 | S11 | II.1 | $\vec{j}_w = -D_w\,\nabla\Phi_w + \vec{v}_w\,\rho_w$ | PDE/Fluss | §5.4 | Vermögensfluss: Diffusion auf $\Phi_w(h(\rho_w), V_w)$ + Konvektion. Lucas-Paradox | ☐ |
 | S12 | II.4 | $\vec{j}_m = -D_m\,\nabla r + \sigma_m\,\vec{E}_{\text{Kredit}}$ | PDE/Fluss | §5.5 | Geldfluss: Zinsgradient + Kreditfeld. Füllt $\nabla\cdot\vec{j}_m$ in I.4. Zwei Regime (zins- vs. kreditgetrieben) | ☐ |
