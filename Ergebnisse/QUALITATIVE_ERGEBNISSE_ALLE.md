@@ -147,6 +147,23 @@
 - **Hysterese/Pfadabhängigkeit**: c* als Gedächtnisvariable macht System nicht-autonom
 - **Info-Bifurkation**: I_crit≈10 als topologischer Defekt im Parameterraum
 
+### S22 — L.1 Rationales Arbeitsangebot (8/8 Val)
+- **FOC §6.4**: w_L·u'(c*) = V'(L*) u.d.N. c = w·L + r·K + π — 4 funktionale Formen (CRRA+Iso, Log+Quad, CRRA+Quad, GHH)
+- **Prop 6.2 bestätigt**: Strukturelle Symmetrie Konsum↔Arbeit (r↔w, γ↔η, V.1a↔L.1a, V.2↔L.2, V.3↔L.3)
+- **Prop 6.4 bestätigt**: S22 ≡ neoklassischer Grenzfall (Ψ_L=0, Φ_L=0 → reiner FOC)
+- **Backward-Bending**: 88% des (γ,η)-Raums, Trennlinie γ≈η; Slutsky: SE=+0.117, IE=−0.223, Total=−0.106
+- **Vermögens-Arbeits-Kopplung**: Corr(L,K)=−0.359 — Reiche arbeiten weniger (reiner IE, kein SE)
+- **Jensen-Aggregation**: Var(K)↑ → L_agg↓ (konkaves L*(K)), Gini(L)=0.208, Gini(c)=0.214
+- **Profit-Supersensitivität**: dL*/dπ=−0.301 stärkster Gradient — Profit substituiert Arbeit massiv
+- 8 Regime: Basis(3 Klassen), Backward-Bending, Vermögen, Formenvergleich, Frisch, Risikoaversion, Multi-Agent(N=80), Corner
+
+**Mathematische Strukturen (S22):**
+- Implizite-Funktionen-Theorem: dL/dw = −F_w/F_L, Vorzeichen ambig (SE+IE)
+- Dualität Konsum-Freizeit: λ = u'(c) = V'(L)/w — Schattenpreisidentität
+- Backward-Bending als Phasenübergang: 88% des Parameterraums, Grenze γ≈η
+- Heterogenitäts-Aggregation: Jensen-Ungleichung → Mikro-Heterogenität hat Makro-Konsequenzen
+- Forminvarianz (Prop 3.1): Dispersion 0.598, qualitativ robust, quantitativ bis 50% verschieden
+
 ---
 
 ## Übergreifende Muster
@@ -154,15 +171,18 @@
 | Muster | Simulationen | Mechanismus |
 |--------|-------------|-------------|
 | **I→0 Singularität** | S08, S09, S10, S13, S15, S16, S17, S18 | Information→0 erzeugt Divergenz in Preisen, Potential, Flüssen, Konsum |
-| **Endogene Ungleichheit** | S01, S03, S15, S17, S18 | Heterogene Parameter → Gini wächst ohne externe Schocks |
+| **Endogene Ungleichheit** | S01, S03, S15, S17, S18, S22 | Heterogene Parameter → Gini wächst ohne externe Schocks |
 | **Netzwerk-Equalisierung** | S20, S21 | V.3 Herding senkt Gini um 95% — stärkster Gleichheitstreiber im Framework |
 | **Geldpolitik-Impotenz** | S04, S12, S18 | Bei niedrigem I/Kreditkollaps bricht Transmission zusammen |
 | **Positive Feedback** | S08, S09, S13, S16, S20 | Herding, Info-Feedback, Adverse Selektion → explosive Dynamik |
 | **Erhaltungssätze** | S01, S02, S03, S04, S07 | Identitäten gelten exakt — aber nur unter korrekten Definitionen |
 | **Skalentrennung** | S10, S12, S13 | 10 Größenordnungen D-Unterschied → Finanz/Real permanent entkoppelt |
-| **Schwellenverhalten** | S08, S09, S11, S13, S16, S20 | Phasenübergänge zwischen Effizienz, Bubble und Krise |
+| **Schwellenverhalten** | S08, S09, S11, S13, S16, S20, S22 | Phasenübergänge zwischen Effizienz, Bubble und Krise; Backward-Bending Phasengrenze γ≈η |
 | **Asymmetrie-Schutz** | S19, S20, S21 | Verlustaversion (S19) + Herding-Asymmetrie (S20) → "sticky consumption" |
 | **Hysterese/Scarring** | S21 | c*-Gedächtnis → Krisen hinterlassen permanente Spuren (Maß 0.315) |
-| **Klassen-Bifurkation** | S15, S18, S21 | Information als einziger Parameter erzeugt persistente Zweiklassengesellschaft |
+| **Klassen-Bifurkation** | S15, S18, S21, S22 | Information/Vermögen als Parameter erzeugt persistente Klassenschichtung |
+
+| **Backward-Bending / Vorzeichen-Ambiguität** | S22 | SE+IE Vorzeichen ambig → Arbeitsangebotskurve in 88% des Parameterraums rückwärts gebogen |
+| **Jensen-Aggregation** | S22 | Konkaves L*(K) + Heterogenität → Aggregiertes Arbeitsangebot sinkt mit Wealth-Varianz |
 
 > **Beobachtung 6.1 bestätigt:** Kein einziger Entscheidungskanal ist informationsunabhängig. Die Information I durchdringt jede Gleichung des Frameworks — von der Vermögensbilanz bis zur Konsumplanung.
