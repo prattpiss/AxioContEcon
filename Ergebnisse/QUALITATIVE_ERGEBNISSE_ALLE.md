@@ -1,6 +1,6 @@
-# Qualitative Ergebnisse — Alle Simulationen (S01–S24)
+# Qualitative Ergebnisse — Alle Simulationen (S01–S25)
 
-> **AxioContEcon**: 22 Simulationen, 147/147 Validierungen bestanden  
+> **AxioContEcon**: 23 Simulationen, 155/155 Validierungen bestanden  
 > Stichpunktartige Zusammenfassung der qualitativen Kernbefunde
 
 ---
@@ -203,6 +203,23 @@
 - Workaholic Treadmill: L* ↑→ Burnout-Schwelle ↑→ L ↑→ positive Rückkopplung
 - Flow-State als ökonomisches Gleichgewicht: I_eq(L) monoton steigend → Mannigfaltigkeit im (L,I)-Raum
 
+### S25 — L.3 Soziale Arbeitskopplung (8/8 Val)
+- **Gleichung L.3 §6.4**: Σ_j A_ij Φ_L(L_j−L_i, I_j, I_i) + S(rank, Kultur) — Peer-Norm + Statusdruck
+- **Prop 6.2 bestätigt**: L.3(S=0) ≡ V.3 (max|Δ|=0, perfekte Identität über volle Dynamik)
+- **Duale Sozialoperatoren**: Φ_L (Graph-Diffusion, konvergierend) + S (Status-Lift, immer positiv)
+- **Kulturvergleich**: Japan 24.0h, USA 23.1h, DE 18.9h, FR 12.8h; ΔL(JP-FR)=11.2h
+- **Status-induzierter Symmetriebruch**: V.3 → Gleichgewicht bei Mittelwert; L.3 → systematisch darüber (S verschiebt)
+- **Peer/Status-Dekomposition**: Peer-Anteil kulturunabhängig (~8.4h), gesamter Kulturunterschied aus S-Term
+- **Overwork-Contagion (Japan)**: 10 Workaholics → 100% über 12h (vollständige Ansteckung bei k=2.5)
+- **Entropie**: S(T)/S_max=1.000 (vollständige Homogenisierung bei starker Kopplung)
+- 8 Regime: Φ_L-Funktion, Status-Operator, Multiplex-Netzwerk, Norm-Kaskade, Kulturvergleich, Vier-Ebenen, Overwork, Prop 6.2
+
+**Mathematische Strukturen (S25):**
+- Duale Sozialoperatoren: Φ_L (Laplace auf Graph) + S (rank-basierter Drift) = Fokker-Planck auf Netzwerk
+- Status-Symmetriebruch: S bricht Auf/Ab-Symmetrie → L_eq > L_natürlich; Kultur steuert Bruchstärke
+- Kuramoto mit externem Feld: S wirkt wie externes Feld → bricht Rotationssymmetrie; Fiedler=1.977
+- Prop 6.2 Identität: Bei S=0 ist L.3 EXAKT V.3 — Status ist die EINZIGE Quelle der Asymmetrie
+
 ---
 
 ## Übergreifende Muster
@@ -211,13 +228,13 @@
 |--------|-------------|-------------|
 | **I→0 Singularität** | S08, S09, S10, S13, S15, S16, S17, S18, S23 | Information→0 erzeugt Divergenz in Preisen, Potential, Flüssen, Konsum, Lohnwahrnehmung |
 | **Endogene Ungleichheit** | S01, S03, S15, S17, S18, S22, S23 | Heterogene Parameter → Gini wächst ohne externe Schocks (S23: Friction komprimiert via B-B) |
-| **Netzwerk-Equalisierung** | S20, S21 | V.3 Herding senkt Gini um 95% — stärkster Gleichheitstreiber im Framework |
+| **Netzwerk-Equalisierung** | S20, S21, S25 | V.3/L.3 Herding senkt Gini um 95% — stärkster Gleichheitstreiber im Framework; S25: α=0.5 → Gini=0.000 |
 | **Geldpolitik-Impotenz** | S04, S12, S18, S23 | Bei niedrigem I/Kreditkollaps bricht Transmission zusammen (S23: Lohn-Transmission 12% für Informelle) |
-| **Positive Feedback** | S08, S09, S13, S16, S20, S24 | Herding, Info-Feedback, Adverse Selektion, Workaholic Treadmill → explosive Dynamik |
+| **Positive Feedback** | S08, S09, S13, S16, S20, S24, S25 | Herding, Info-Feedback, Adverse Selektion, Workaholic Treadmill, Overwork-Contagion → explosive Dynamik |
 | **Erhaltungssätze** | S01, S02, S03, S04, S07 | Identitäten gelten exakt — aber nur unter korrekten Definitionen |
 | **Skalentrennung** | S10, S12, S13 | 10 Größenordnungen D-Unterschied → Finanz/Real permanent entkoppelt |
 | **Schwellenverhalten** | S08, S09, S11, S13, S16, S20, S22 | Phasenübergänge zwischen Effizienz, Bubble und Krise; Backward-Bending Phasengrenze γ≈η |
-| **Asymmetrie-Schutz** | S19, S20, S21, S24 | Verlustaversion (S19) + Herding-Asymmetrie (S20) + Burnout-Asymmetrie (S24) → "sticky behavior" |
+| **Asymmetrie-Schutz** | S19, S20, S21, S24, S25 | Verlustaversion (S19) + Herding-Asymmetrie (S20) + Burnout (S24) + Normkonvergenz-Asymmetrie 2.50 (S25) → "sticky behavior" |
 | **Hysterese/Scarring** | S21, S24 | c*-Gedächtnis (S21) + L*-Adaptation (S24) → Krisen/Überarbeit hinterlassen permanente Spuren |
 | **Klassen-Bifurkation** | S15, S18, S21, S22, S23 | Information/Vermögen als Parameter erzeugt persistente Klassenschichtung (S23: Wohlfahrtsverlust 34% vs. 1.3%) |
 
@@ -229,4 +246,7 @@
 | **Info-Dualität** | S24 | Information dämpft Burnout ABER verstärkt Motivation → einzigartige nicht-monotone I-Abhängigkeit; Crossover I≈0.62 |
 | **Flow-State / Workaholic** | S24 | Bei I_job > I_eq: Motivation > Burnout → freiwillige Überarbeit; L*-Adaptation → Treadmill |
 
-> **Beobachtung 6.1 bestätigt:** Kein einziger Entscheidungskanal ist informationsunabhängig. Die Information I durchdringt jede Gleichung des Frameworks — von der Vermögensbilanz bis zur Konsumplanung bis zum Arbeitsmarkt. S24 zeigt: Selbst die psychologische Schicht hat eine duale I-Abhängigkeit.
+| **Status-Symmetriebruch** | S25 | S-Operator bricht V.3↔L.3-Symmetrie: L_eq > L_natürlich; Kultur steuert Bruchstärke (JP 24h, FR 12.8h) |
+| **Kulturelle Overwork-Falle** | S25 | Japan (k=2.5): 100% Contagion >12h; Peer-Anteil (8.4h) kulturunabhängig, Δ kommt NUR aus Status |
+
+> **Beobachtung 6.1 bestätigt:** Kein einziger Entscheidungskanal ist informationsunabhängig. Die Information I durchdringt jede Gleichung des Frameworks — von der Vermögensbilanz bis zur Konsumplanung bis zum Arbeitsmarkt. S24 zeigt: Selbst die psychologische Schicht hat eine duale I-Abhängigkeit. S25 bestätigt: Auch der soziale Kanal wird durch I moduliert (Info-Modulation in Φ_L).
