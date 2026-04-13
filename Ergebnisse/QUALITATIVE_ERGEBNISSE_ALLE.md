@@ -1,6 +1,6 @@
-# Qualitative Ergebnisse — Alle Simulationen (S01–S25)
+# Qualitative Ergebnisse — Alle Simulationen (S01–S26)
 
-> **AxioContEcon**: 23 Simulationen, 155/155 Validierungen bestanden  
+> **AxioContEcon**: 24 Simulationen, 163/163 Validierungen bestanden  
 > Stichpunktartige Zusammenfassung der qualitativen Kernbefunde
 
 ---
@@ -220,6 +220,25 @@
 - Kuramoto mit externem Feld: S wirkt wie externes Feld → bricht Rotationssymmetrie; Fiedler=1.977
 - Prop 6.2 Identität: Bei S=0 ist L.3 EXAKT V.3 — Status ist die EINZIGE Quelle der Asymmetrie
 
+### S26 — L.4 Vollständige Arbeitsangebotsdynamik (8/8 Val)
+- **Gleichung L.4 §6.4**: dL/dt = α_L(L*−L) + Ψ_L(L,L*,L̄,I,H) + Σ_j A_ij Φ_L(·) + S(rank,K) — Vollständiges 2N-ODE (Analog zu S21/V.4)
+- **Prop 6.1 bestätigt**: Im Limit I→∞, L*=L, A=0, S=0: System stabil (err=0)
+- **Prop 6.2 bestätigt**: Bei S=0 ist L.4 dynamisch EXAKT V.4 (max|Δ_dyn|=0)
+- **Additivität**: dL/dt = L.1 + L.2 + L.3 exakt (err=0 im Interior)
+- **Dominanz-Regime**: Normal→L.1 dominiert; Burnout-Krise→L.2 dominiert
+- **Kulturvergleich**: JP 23.8h, USA 23.4h, DE 23.1h, FR 21.9h; ΔL(JP-FR)=1.9h
+- **Subadditivität**: Ratio=0.784 — Burnout (L.2) limitiert Herding-Aufwärtstrend (L.3)
+- **Hysterese/Scarring**: Statusdruck-Schock → L*-Adaptation → Gap +15.7h nach Erholung
+- **Ebenen-Vergleich**: L.1 nur: 8.1h; +L.2: 16.5h; +L.3: 18.2h; Komplett: 23.4h
+- 8 Regime: Normal, Workaholic-Kaskade, Burnout-Krise, L*-Drift, Info-Heterogenität, Kulturvergleich, Inequality, Prop 6.1+6.2
+
+**Mathematische Strukturen (S26):**
+- Gradientensystem + externes Feld: L.1+L.2 = Potential; L.3a = Diffusion; L.3b = Drift → Fokker-Planck
+- Mehrskalige Separation: L schnell, L* langsam → Singuläre Störungstheorie → Hysterese
+- Nichtlineare Superposition: ratio=0.784 (subadditiv: Burnout bremst Herding)
+- Prop 6.2 Symmetrie: V.4↔L.4 bei S=0 EXAKT; Status ist EINZIGE Asymmetrie-Quelle
+- Kulturelle Bifurkation: Identisches Modell, nur K verschieden → JP-FR Divergenz emergent
+
 ---
 
 ## Übergreifende Muster
@@ -235,7 +254,7 @@
 | **Skalentrennung** | S10, S12, S13 | 10 Größenordnungen D-Unterschied → Finanz/Real permanent entkoppelt |
 | **Schwellenverhalten** | S08, S09, S11, S13, S16, S20, S22 | Phasenübergänge zwischen Effizienz, Bubble und Krise; Backward-Bending Phasengrenze γ≈η |
 | **Asymmetrie-Schutz** | S19, S20, S21, S24, S25 | Verlustaversion (S19) + Herding-Asymmetrie (S20) + Burnout (S24) + Normkonvergenz-Asymmetrie 2.50 (S25) → "sticky behavior" |
-| **Hysterese/Scarring** | S21, S24 | c*-Gedächtnis (S21) + L*-Adaptation (S24) → Krisen/Überarbeit hinterlassen permanente Spuren |
+| **Hysterese/Scarring** | S21, S24, S26 | c*-Gedächtnis (S21) + L*-Adaptation (S24, S26) → Scarring; S26: Gap +15.7h nach Statusdruck-Schock |
 | **Klassen-Bifurkation** | S15, S18, S21, S22, S23 | Information/Vermögen als Parameter erzeugt persistente Klassenschichtung (S23: Wohlfahrtsverlust 34% vs. 1.3%) |
 
 | **Backward-Bending / Vorzeichen-Ambiguität** | S22, S23 | SE+IE Vorzeichen ambig → Arbeitsangebotskurve in 88% des Parameterraums rückwärts gebogen; S23: Friction komprimiert Gini via B-B |
@@ -246,7 +265,10 @@
 | **Info-Dualität** | S24 | Information dämpft Burnout ABER verstärkt Motivation → einzigartige nicht-monotone I-Abhängigkeit; Crossover I≈0.62 |
 | **Flow-State / Workaholic** | S24 | Bei I_job > I_eq: Motivation > Burnout → freiwillige Überarbeit; L*-Adaptation → Treadmill |
 
-| **Status-Symmetriebruch** | S25 | S-Operator bricht V.3↔L.3-Symmetrie: L_eq > L_natürlich; Kultur steuert Bruchstärke (JP 24h, FR 12.8h) |
-| **Kulturelle Overwork-Falle** | S25 | Japan (k=2.5): 100% Contagion >12h; Peer-Anteil (8.4h) kulturunabhängig, Δ kommt NUR aus Status |
+| **Status-Symmetriebruch** | S25, S26 | S-Operator bricht V.3↔L.3-Symmetrie; S26: Prop 6.2 V.4↔L.4 bei S=0 exakt, S bricht diese Symmetrie |
+| **Kulturelle Overwork-Falle** | S25, S26 | Japan (k=2.5): 100% Contagion >12h; S26 Vier-Ebenen: JP 23.8h vs FR 21.9h |
 
-> **Beobachtung 6.1 bestätigt:** Kein einziger Entscheidungskanal ist informationsunabhängig. Die Information I durchdringt jede Gleichung des Frameworks — von der Vermögensbilanz bis zur Konsumplanung bis zum Arbeitsmarkt. S24 zeigt: Selbst die psychologische Schicht hat eine duale I-Abhängigkeit. S25 bestätigt: Auch der soziale Kanal wird durch I moduliert (Info-Modulation in Φ_L).
+| **Subadditivität / Emergenz** | S21, S26 | S21: V.4 Superadditivität; S26: L.4 Subadditivität (ratio=0.784) — Burnout limitiert Herding |
+| **Vier-Ebenen-Integration** | S21, S26 | V.4=V.1+V.2+V.3 (S21) ↔ L.4=L.1+L.2+L.3 (S26) — strukturelle Symmetrie Konsum/Arbeit (Prop 6.2) |
+
+> **Beobachtung 6.1 bestätigt:** Kein einziger Entscheidungskanal ist informationsunabhängig. Die Information I durchdringt jede Gleichung des Frameworks — von der Vermögensbilanz bis zur Konsumplanung bis zum Arbeitsmarkt. S24 zeigt: Selbst die psychologische Schicht hat eine duale I-Abhängigkeit. S25 bestätigt: Auch der soziale Kanal wird durch I moduliert (Info-Modulation in Φ_L). S26 bestätigt: Im vollständigen Vierschichtsystem L.4 wirkt I dual (Burnout↓ + Motivation↑ + Peer-Modulation).
