@@ -1,6 +1,6 @@
-# Qualitative Ergebnisse — Alle Simulationen (S01–S19)
+# Qualitative Ergebnisse — Alle Simulationen (S01–S20)
 
-> **AxioContEcon**: 17 Simulationen, 107/107 Validierungen bestanden  
+> **AxioContEcon**: 18 Simulationen, 115/115 Validierungen bestanden  
 > Stichpunktartige Zusammenfassung der qualitativen Kernbefunde
 
 ---
@@ -114,6 +114,22 @@
 - **Hedonisches Laufband**: schnelle Adaptation → Surplus→0.22 → Zufriedenheit vergänglich
 - Ψ ist **equalisierend**: Gini sinkt 0.272→0.250 (anders als V.1, das Ungleichheit verstärkt)
 
+### S20 — V.3 Soziale Konsumvergleiche (8/8 Val)
+- **Herding-Asymmetrie**: α_up/α_down = 2.50 → Aufwärtsherding 2.5× stärker als Abwärts
+- **Stärkster Gleichheitstreiber**: V.3 senkt Gini um 95% (0.179→0.009), V.2 nur 31%
+- Multiplex-Netzwerk (5 Layer): Trade, Info, Sozial, Finanz, Institut mit A_eff = Σ ω_l A^(l)
+- **Scale-Free 2.3× schneller** als Random bei Konsumkonvergenz (Hubs als Superspreader)
+- Crash-Kaskade scheitert: 0% Contagion trotz 10 Crash-Agenten → Asymmetrie schützt
+- **Info-Emanzipation**: 31x Einflussunterschied je nach I_j/I_i Kombination
+- R8 bestätigt Prop 6.1: A=0, I→∞ reproduziert reinen Euler-Pfad
+- Shannon-Entropie: S(T)/S_max = 1.000 → perfekte Gleichverteilung im Herding-Gleichgewicht
+
+#### Mathematische Strukturen (S20)
+- **Graph-Diffusion**: V.3 ≡ verallgemeinerter Laplace auf Netzwerk; λ₂=1.977 bestimmt Mischzeit
+- **Onsager-Symmetrie gebrochen**: α_up≠α_down → Nicht-Gleichgewichtsthermodynamik
+- **Kuramoto-Analogie**: V.3 formal identisch mit Synchronisationsmodell; Φ↔sin
+- **Lyapunov gebrochen**: Asymmetrie bricht V=Σ A(c_i−c_j)², aber Entropie steigt dennoch
+
 ---
 
 ## Übergreifende Muster
@@ -122,10 +138,12 @@
 |--------|-------------|-------------|
 | **I→0 Singularität** | S08, S09, S10, S13, S15, S16, S17, S18 | Information→0 erzeugt Divergenz in Preisen, Potential, Flüssen, Konsum |
 | **Endogene Ungleichheit** | S01, S03, S15, S17, S18 | Heterogene Parameter → Gini wächst ohne externe Schocks |
+| **Netzwerk-Equalisierung** | S20 | V.3 Herding senkt Gini um 95% — stärkster Gleichheitstreiber im Framework |
 | **Geldpolitik-Impotenz** | S04, S12, S18 | Bei niedrigem I/Kreditkollaps bricht Transmission zusammen |
-| **Positive Feedback** | S08, S09, S13, S16 | Herding, Info-Feedback, Adverse Selektion → explosive Dynamik |
+| **Positive Feedback** | S08, S09, S13, S16, S20 | Herding, Info-Feedback, Adverse Selektion → explosive Dynamik |
 | **Erhaltungssätze** | S01, S02, S03, S04, S07 | Identitäten gelten exakt — aber nur unter korrekten Definitionen |
 | **Skalentrennung** | S10, S12, S13 | 10 Größenordnungen D-Unterschied → Finanz/Real permanent entkoppelt |
-| **Schwellenverhalten** | S08, S09, S11, S13, S16 | Phasenübergänge zwischen Effizienz, Bubble und Krise |
+| **Schwellenverhalten** | S08, S09, S11, S13, S16, S20 | Phasenübergänge zwischen Effizienz, Bubble und Krise |
+| **Asymmetrie-Schutz** | S19, S20 | Verlustaversion (S19) + Herding-Asymmetrie (S20) → "sticky consumption" |
 
 > **Beobachtung 6.1 bestätigt:** Kein einziger Entscheidungskanal ist informationsunabhängig. Die Information I durchdringt jede Gleichung des Frameworks — von der Vermögensbilanz bis zur Konsumplanung.
