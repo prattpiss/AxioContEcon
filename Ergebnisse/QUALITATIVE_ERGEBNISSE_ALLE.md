@@ -1,6 +1,6 @@
-# Qualitative Ergebnisse — Alle Simulationen (S01–S26)
+# Qualitative Ergebnisse — Alle Simulationen (S01–S27)
 
-> **AxioContEcon**: 24 Simulationen, 163/163 Validierungen bestanden  
+> **AxioContEcon**: 25 Simulationen, 171/171 Validierungen bestanden  
 > Stichpunktartige Zusammenfassung der qualitativen Kernbefunde
 
 ---
@@ -239,6 +239,25 @@
 - Prop 6.2 Symmetrie: V.4↔L.4 bei S=0 EXAKT; Status ist EINZIGE Asymmetrie-Quelle
 - Kulturelle Bifurkation: Identisches Modell, nur K verschieden → JP-FR Divergenz emergent
 
+### S27 — III.3 Produktionsdynamik (8/8 Val)
+- **Gleichung III.3 §6.5**: dq_k/dt = λ_q·(p_k−MC_k(q_k))/p_k·q_k − δ_q·q_k — Gewinnmargengesteuerte Expansion mit Abschreibung
+- **Konvergenz**: q→q* von unten UND oben (err=0.000000); q* global stabil
+- **Axiome bestätigt**: p>MC⇒Expansion, p<MC⇒Kontraktion, GG bei (p−MC)/p=δ/λ=0.10 exakt
+- **Abschreibung**: p<MC → exponentieller Zerfall (q: 50→0.001, t₁/₂=0.1)
+- **MC-Konvexität**: α=1→q*=70; α=3→q*=4.1 (steilere MC = weniger Produktion)
+- **Anpassungsgeschwindigkeit**: λ_q=0.1→conv_t=50; λ_q=3.0→conv_t=1.7
+- **Oligopol**: Effizienteste Firma (c₀=1.0) hält 43.9% Marktanteil → emergente Konzentration
+- **Neoklassischer Grenzfall**: λ→∞ ⇒ conv_t=0.061 (sofortige Walrasianische Anpassung)
+- **Lerner-Index**: (p−MC)/p als universelle Steuervariable; GG: L*=δ/λ=0.10
+- 8 Regime: Konvergenz, Multi-Gut, Boom&Crash, Zerfall, MC-Konvexität, λ-Sweep, Oligopol, Neoklassisch
+
+**Mathematische Strukturen (S27):**
+- Gradientendynamik: q* global stabil, Eigenwert f'(q*)=−λ·MC'·q*/p < 0 stets
+- Gibrat-artiges Wachstum: dq/dt∝q transient, aber MC-Bremse begrenzt → kein unbegrenztes Wachstum
+- Lerner-Index als Steuervariable: L=(p−MC)/p; L>δ/λ: Expansion; L<δ/λ: Kontraktion
+- Separation Preis-/Mengendynamik: III.3(q) + II.2(p) = Tâtonnement-Fixpunkt
+- Natürliche Selektion: Heterogene c₀ → Replikatordynamik; Marktkonzentration emergent
+
 ---
 
 ## Übergreifende Muster
@@ -249,13 +268,13 @@
 | **Endogene Ungleichheit** | S01, S03, S15, S17, S18, S22, S23 | Heterogene Parameter → Gini wächst ohne externe Schocks (S23: Friction komprimiert via B-B) |
 | **Netzwerk-Equalisierung** | S20, S21, S25 | V.3/L.3 Herding senkt Gini um 95% — stärkster Gleichheitstreiber im Framework; S25: α=0.5 → Gini=0.000 |
 | **Geldpolitik-Impotenz** | S04, S12, S18, S23 | Bei niedrigem I/Kreditkollaps bricht Transmission zusammen (S23: Lohn-Transmission 12% für Informelle) |
-| **Positive Feedback** | S08, S09, S13, S16, S20, S24, S25 | Herding, Info-Feedback, Adverse Selektion, Workaholic Treadmill, Overwork-Contagion → explosive Dynamik |
+| **Positive Feedback** | S08, S09, S13, S16, S20, S24, S25, S27 | Herding, Info-Feedback, Adverse Selektion, Workaholic Treadmill, Overwork-Contagion, Gibrat-Wachstum → explosive Dynamik (S27: dq∝q transient) |
 | **Erhaltungssätze** | S01, S02, S03, S04, S07 | Identitäten gelten exakt — aber nur unter korrekten Definitionen |
 | **Skalentrennung** | S10, S12, S13 | 10 Größenordnungen D-Unterschied → Finanz/Real permanent entkoppelt |
 | **Schwellenverhalten** | S08, S09, S11, S13, S16, S20, S22 | Phasenübergänge zwischen Effizienz, Bubble und Krise; Backward-Bending Phasengrenze γ≈η |
 | **Asymmetrie-Schutz** | S19, S20, S21, S24, S25 | Verlustaversion (S19) + Herding-Asymmetrie (S20) + Burnout (S24) + Normkonvergenz-Asymmetrie 2.50 (S25) → "sticky behavior" |
 | **Hysterese/Scarring** | S21, S24, S26 | c*-Gedächtnis (S21) + L*-Adaptation (S24, S26) → Scarring; S26: Gap +15.7h nach Statusdruck-Schock |
-| **Klassen-Bifurkation** | S15, S18, S21, S22, S23 | Information/Vermögen als Parameter erzeugt persistente Klassenschichtung (S23: Wohlfahrtsverlust 34% vs. 1.3%) |
+| **Klassen-Bifurkation** | S15, S18, S21, S22, S23, S27 | Information/Vermögen als Parameter erzeugt persistente Klassenschichtung (S23: Wohlfahrtsverlust 34% vs. 1.3%); S27: Kostenheterogenität → Marktkonzentration (43.9% für effizienteste Firma) |
 
 | **Backward-Bending / Vorzeichen-Ambiguität** | S22, S23 | SE+IE Vorzeichen ambig → Arbeitsangebotskurve in 88% des Parameterraums rückwärts gebogen; S23: Friction komprimiert Gini via B-B |
 | **Jensen-Aggregation** | S22, S23 | Konkaves L*(K) + Heterogenität → Aggregiertes Arbeitsangebot sinkt mit Wealth-Varianz; S23: Makro-neutral trotz Mikro-Verzerrung |
