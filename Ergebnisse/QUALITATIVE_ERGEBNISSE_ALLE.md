@@ -1,6 +1,6 @@
-# Qualitative Ergebnisse — Alle Simulationen (S01–S23)
+# Qualitative Ergebnisse — Alle Simulationen (S01–S24)
 
-> **AxioContEcon**: 21 Simulationen, 139/139 Validierungen bestanden  
+> **AxioContEcon**: 22 Simulationen, 147/147 Validierungen bestanden  
 > Stichpunktartige Zusammenfassung der qualitativen Kernbefunde
 
 ---
@@ -184,6 +184,25 @@
 - Vorzeichen-Asymmetrie + Poverty Trap: V.1a(−) + L.1a(+) → gleichzeitige Spar- und Migrationsfalle
 - Gini-Kompression: Positive Friction + Backward-Bending → Ungleichheit sinkt (nur bei γ > η)
 
+### S24 — L.2 Psychologische Arbeitsverzerrung (8/8 Val)
+- **Gleichung L.2 §6.4**: Ψ_L(L, L*, L̄, I^job, H) — Burnout/Referenz + Intrinsische Motivation
+- **Prop 6.2 bestätigt**: Exakte Symmetrie V.2 ↔ L.2 (max|Δ|=8.3×10⁻¹⁷ bei I_job=0)
+- **Burnout-Asymmetrie**: λ_B=2.25 exakt (identisch zu Verlustaversion in V.2)
+- **Info-Dualität** (EINZIGARTIG): I dämpft Burnout (wie V.2), aber VERSTÄRKT Motivation; Crossover bei I≈0.62
+- **Flow-State-Mannigfaltigkeit**: Bei I_job > I_eq arbeiten Agenten freiwillig über rationalem Niveau
+- **Workaholic Treadmill**: Motivation + L*-Adaptation → positive Rückkopplung (nur Ψ_max begrenzt)
+- **Gegenintuitive Erholung**: Schnellere L*-Adaptation → langsamere Schock-Erholung
+- **H als dominanter Gradient**: dΨ/dH=0.444 >> alle anderen Parameter
+- Gini-Kompression: 0.205→0.039 (−81%) durch Motivation-Ceiling
+- 8 Regime: Referenzpunkt, Burnout-Asymmetrie, Adaptation, Motivation, Info-Dualität, Heterogen(N=300), Schock, Drei-Ebenen
+
+**Mathematische Strukturen (S24):**
+- Duale Informationsrolle: ∂Ψ/∂I Vorzeichen ambig (Burnout↓ + Motivation↑) → topologischer Crossover
+- Prospect-Theory-Isomorphismus: v(L*−L) mit λ_B=2.25 identisch zu V.2
+- Michaelis-Menten Dualität: 1/(1+I) (Dämpfung) + I/(I+ψ) (Verstärkung) → komplementäre Architektur
+- Workaholic Treadmill: L* ↑→ Burnout-Schwelle ↑→ L ↑→ positive Rückkopplung
+- Flow-State als ökonomisches Gleichgewicht: I_eq(L) monoton steigend → Mannigfaltigkeit im (L,I)-Raum
+
 ---
 
 ## Übergreifende Muster
@@ -194,12 +213,12 @@
 | **Endogene Ungleichheit** | S01, S03, S15, S17, S18, S22, S23 | Heterogene Parameter → Gini wächst ohne externe Schocks (S23: Friction komprimiert via B-B) |
 | **Netzwerk-Equalisierung** | S20, S21 | V.3 Herding senkt Gini um 95% — stärkster Gleichheitstreiber im Framework |
 | **Geldpolitik-Impotenz** | S04, S12, S18, S23 | Bei niedrigem I/Kreditkollaps bricht Transmission zusammen (S23: Lohn-Transmission 12% für Informelle) |
-| **Positive Feedback** | S08, S09, S13, S16, S20 | Herding, Info-Feedback, Adverse Selektion → explosive Dynamik |
+| **Positive Feedback** | S08, S09, S13, S16, S20, S24 | Herding, Info-Feedback, Adverse Selektion, Workaholic Treadmill → explosive Dynamik |
 | **Erhaltungssätze** | S01, S02, S03, S04, S07 | Identitäten gelten exakt — aber nur unter korrekten Definitionen |
 | **Skalentrennung** | S10, S12, S13 | 10 Größenordnungen D-Unterschied → Finanz/Real permanent entkoppelt |
 | **Schwellenverhalten** | S08, S09, S11, S13, S16, S20, S22 | Phasenübergänge zwischen Effizienz, Bubble und Krise; Backward-Bending Phasengrenze γ≈η |
-| **Asymmetrie-Schutz** | S19, S20, S21 | Verlustaversion (S19) + Herding-Asymmetrie (S20) → "sticky consumption" |
-| **Hysterese/Scarring** | S21 | c*-Gedächtnis → Krisen hinterlassen permanente Spuren (Maß 0.315) |
+| **Asymmetrie-Schutz** | S19, S20, S21, S24 | Verlustaversion (S19) + Herding-Asymmetrie (S20) + Burnout-Asymmetrie (S24) → "sticky behavior" |
+| **Hysterese/Scarring** | S21, S24 | c*-Gedächtnis (S21) + L*-Adaptation (S24) → Krisen/Überarbeit hinterlassen permanente Spuren |
 | **Klassen-Bifurkation** | S15, S18, S21, S22, S23 | Information/Vermögen als Parameter erzeugt persistente Klassenschichtung (S23: Wohlfahrtsverlust 34% vs. 1.3%) |
 
 | **Backward-Bending / Vorzeichen-Ambiguität** | S22, S23 | SE+IE Vorzeichen ambig → Arbeitsangebotskurve in 88% des Parameterraums rückwärts gebogen; S23: Friction komprimiert Gini via B-B |
@@ -207,4 +226,7 @@
 
 | **Fehlmigration / Poverty Trap** | S23 | V.1a(−)+L.1a(+): Gleichzeitig zu wenig Sparen + Fehlmigration bei niedrigem I → permanente Armutsfalle |
 
-> **Beobachtung 6.1 bestätigt:** Kein einziger Entscheidungskanal ist informationsunabhängig. Die Information I durchdringt jede Gleichung des Frameworks — von der Vermögensbilanz bis zur Konsumplanung bis zum Arbeitsmarkt.
+| **Info-Dualität** | S24 | Information dämpft Burnout ABER verstärkt Motivation → einzigartige nicht-monotone I-Abhängigkeit; Crossover I≈0.62 |
+| **Flow-State / Workaholic** | S24 | Bei I_job > I_eq: Motivation > Burnout → freiwillige Überarbeit; L*-Adaptation → Treadmill |
+
+> **Beobachtung 6.1 bestätigt:** Kein einziger Entscheidungskanal ist informationsunabhängig. Die Information I durchdringt jede Gleichung des Frameworks — von der Vermögensbilanz bis zur Konsumplanung bis zum Arbeitsmarkt. S24 zeigt: Selbst die psychologische Schicht hat eine duale I-Abhängigkeit.
