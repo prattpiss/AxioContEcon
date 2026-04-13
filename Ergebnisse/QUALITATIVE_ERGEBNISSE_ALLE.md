@@ -1,6 +1,6 @@
-# Qualitative Ergebnisse — Alle Simulationen (S01–S20)
+# Qualitative Ergebnisse — Alle Simulationen (S01–S21)
 
-> **AxioContEcon**: 18 Simulationen, 115/115 Validierungen bestanden  
+> **AxioContEcon**: 19 Simulationen, 123/123 Validierungen bestanden  
 > Stichpunktartige Zusammenfassung der qualitativen Kernbefunde
 
 ---
@@ -130,6 +130,23 @@
 - **Kuramoto-Analogie**: V.3 formal identisch mit Synchronisationsmodell; Φ↔sin
 - **Lyapunov gebrochen**: Asymmetrie bricht V=Σ A(c_i−c_j)², aber Entropie steigt dennoch
 
+### S21 — Drei-Ebenen-Konsumsystem komplett V.1+V.2+V.3 (8/8 Val)
+- **Master-Gleichung §6.3**: dc/dt = R(V.1) + Ψ(V.2) + S(V.3) + dc*/dt = λ_c(c−c*) — vollständige 2N-dimensionale ODE
+- **Prop 6.1 bestätigt**: I→∞, c*=c, A=0 reproduziert reinen Euler (Fehler 1.5×10⁻⁴)
+- **Prop 6.3 bestätigt**: Dominanzwechsel Normal→R, Krise→Ψ+S (dynamisch, nicht abrupt)
+- **Hysterese quantifiziert**: Maß = 0.315 — Krisen hinterlassen permanente Spuren via c*-Gedächtnis (Scarring Effect)
+- **Subadditivität**: V.2+V.3 kompensieren teilweise (Ratio 0.816) — Konkurrenz der Attraktoren c* vs ⟨c⟩_Nachbarn
+- **Info-Klassen-Bifurkation**: Einziger Parameter I spaltet System in Elite (c=21.3) vs Masse (c=9.1), Ratio 2.34
+- Ebenen-Vergleich: V.3 dominiert Gini-Reduktion (V.1: 0.638, +V.2: 0.502, +V.3: 0.130, komplett: 0.120)
+- 8 Regime: Normal, Bubble, Krise, Lifestyle Creep, Info-Heterogenität, Post-Pandemic, Inequality Spiral, Grenzfall
+
+#### Mathematische Strukturen (S21)
+- **Dreifache Symmetriebrechung**: V.1 (Stationarität), V.2 (Zeitumkehr), V.3 (Onsager) → Nicht-Gradient mit Entropieproduktion
+- **Mehrskalige Separation**: c(schnell) > S(mittel) > c*(langsam) → Tikhonov-Zerlegung möglich
+- **Nichtlineare Superposition**: Ratio 0.816 (subadditiv) — V.2 zieht zu c*, V.3 zum Netzwerk-Mittel
+- **Hysterese/Pfadabhängigkeit**: c* als Gedächtnisvariable macht System nicht-autonom
+- **Info-Bifurkation**: I_crit≈10 als topologischer Defekt im Parameterraum
+
 ---
 
 ## Übergreifende Muster
@@ -138,12 +155,14 @@
 |--------|-------------|-------------|
 | **I→0 Singularität** | S08, S09, S10, S13, S15, S16, S17, S18 | Information→0 erzeugt Divergenz in Preisen, Potential, Flüssen, Konsum |
 | **Endogene Ungleichheit** | S01, S03, S15, S17, S18 | Heterogene Parameter → Gini wächst ohne externe Schocks |
-| **Netzwerk-Equalisierung** | S20 | V.3 Herding senkt Gini um 95% — stärkster Gleichheitstreiber im Framework |
+| **Netzwerk-Equalisierung** | S20, S21 | V.3 Herding senkt Gini um 95% — stärkster Gleichheitstreiber im Framework |
 | **Geldpolitik-Impotenz** | S04, S12, S18 | Bei niedrigem I/Kreditkollaps bricht Transmission zusammen |
 | **Positive Feedback** | S08, S09, S13, S16, S20 | Herding, Info-Feedback, Adverse Selektion → explosive Dynamik |
 | **Erhaltungssätze** | S01, S02, S03, S04, S07 | Identitäten gelten exakt — aber nur unter korrekten Definitionen |
 | **Skalentrennung** | S10, S12, S13 | 10 Größenordnungen D-Unterschied → Finanz/Real permanent entkoppelt |
 | **Schwellenverhalten** | S08, S09, S11, S13, S16, S20 | Phasenübergänge zwischen Effizienz, Bubble und Krise |
-| **Asymmetrie-Schutz** | S19, S20 | Verlustaversion (S19) + Herding-Asymmetrie (S20) → "sticky consumption" |
+| **Asymmetrie-Schutz** | S19, S20, S21 | Verlustaversion (S19) + Herding-Asymmetrie (S20) → "sticky consumption" |
+| **Hysterese/Scarring** | S21 | c*-Gedächtnis → Krisen hinterlassen permanente Spuren (Maß 0.315) |
+| **Klassen-Bifurkation** | S15, S18, S21 | Information als einziger Parameter erzeugt persistente Zweiklassengesellschaft |
 
 > **Beobachtung 6.1 bestätigt:** Kein einziger Entscheidungskanal ist informationsunabhängig. Die Information I durchdringt jede Gleichung des Frameworks — von der Vermögensbilanz bis zur Konsumplanung.
