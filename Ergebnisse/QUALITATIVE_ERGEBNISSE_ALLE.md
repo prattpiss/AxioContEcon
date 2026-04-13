@@ -1,6 +1,6 @@
-# Qualitative Ergebnisse — Alle Simulationen (S01–S21)
+# Qualitative Ergebnisse — Alle Simulationen (S01–S23)
 
-> **AxioContEcon**: 19 Simulationen, 123/123 Validierungen bestanden  
+> **AxioContEcon**: 21 Simulationen, 139/139 Validierungen bestanden  
 > Stichpunktartige Zusammenfassung der qualitativen Kernbefunde
 
 ---
@@ -164,25 +164,47 @@
 - Heterogenitäts-Aggregation: Jensen-Ungleichung → Mikro-Heterogenität hat Makro-Konsequenzen
 - Forminvarianz (Prop 3.1): Dispersion 0.598, qualitativ robust, quantitativ bis 50% verschieden
 
+### S23 — L.1a Wahrgenommener Alternativlohn (8/8 Val)
+- **Master-Gl. §6.4**: w\_wahr = w + α\_H·w̄\_peer + ψ\_w/(I+ε) — 3 Kanäle: Eigenlohn, Peer-Herding, Intransparenz-Aufschlag
+- **Prop 6.2 bestätigt**: Strukturelle Symmetrie V.1a ↔ L.1a — identische Transmissionsformel, max|Δ|=0
+- **Prop 6.4 bestätigt**: α\_H=0, ψ\_w=0 → w\_wahr=w exakt (neoklassisch)
+- **Vorzeichen-Asymmetrie**: V.1a negativ (Zins-Unterschätzung), L.1a positiv (Lohn-Überschätzung → "Gras ist grüner")
+- **Fehlmigration 76%**: Bei schlechtem Ziel + niedrigem I migrieren 3/4 falsch — Informationsarmut als Migrationsfalle
+- **Transmissions-Kluft**: Professional 99.4% vs. Informelle 11.7% — Lohnschocks erreichen die Ärmsten nicht
+- **Poverty Trap (V.1a + L.1a)**: Gleichzeitig zu wenig Sparen + Fehlmigration bei niedrigem I → doppelte Armutsfalle
+- **Gini-Kompression**: Friction *senkt* Ungleichheit (0.160→0.148) via Backward-Bending — gegenintuitiv
+- **Informationssperre**: ω=0.3 → w\_wahr=10.4 (7× Überschätzung) — autoritäre Info-Unterdrückung erzeugt permanente Fehlallokation
+- **Wohlfahrtsverlust**: Arbeiter(I=0.1) bis 34%, Unternehmer nur 1.3% — Vermögenspuffer schützt Reiche
+- 8 Regime: Peer-Sweep, Friction-Sweep, Heterogene Agenten, Gras-ist-grüner, Transmission, Info-Kaskade, Migration, Vollmodell
+
+**Mathematische Strukturen (S23):**
+- Hyperbolische Friction: ψ/(I+ε) konvex strikt fallend, 4 Größenordnungen über 3 Größenordnungen I
+- Michaelis-Menten Transmission: α(I) = I/(I+ψ\_w), identisch zu S03/S18 → universeller Kern
+- Verzerrte FOC: Multiplikativer Fehler über Budget → überproportionaler Wohlfahrtsverlust
+- Vorzeichen-Asymmetrie + Poverty Trap: V.1a(−) + L.1a(+) → gleichzeitige Spar- und Migrationsfalle
+- Gini-Kompression: Positive Friction + Backward-Bending → Ungleichheit sinkt (nur bei γ > η)
+
 ---
 
 ## Übergreifende Muster
 
 | Muster | Simulationen | Mechanismus |
 |--------|-------------|-------------|
-| **I→0 Singularität** | S08, S09, S10, S13, S15, S16, S17, S18 | Information→0 erzeugt Divergenz in Preisen, Potential, Flüssen, Konsum |
-| **Endogene Ungleichheit** | S01, S03, S15, S17, S18, S22 | Heterogene Parameter → Gini wächst ohne externe Schocks |
+| **I→0 Singularität** | S08, S09, S10, S13, S15, S16, S17, S18, S23 | Information→0 erzeugt Divergenz in Preisen, Potential, Flüssen, Konsum, Lohnwahrnehmung |
+| **Endogene Ungleichheit** | S01, S03, S15, S17, S18, S22, S23 | Heterogene Parameter → Gini wächst ohne externe Schocks (S23: Friction komprimiert via B-B) |
 | **Netzwerk-Equalisierung** | S20, S21 | V.3 Herding senkt Gini um 95% — stärkster Gleichheitstreiber im Framework |
-| **Geldpolitik-Impotenz** | S04, S12, S18 | Bei niedrigem I/Kreditkollaps bricht Transmission zusammen |
+| **Geldpolitik-Impotenz** | S04, S12, S18, S23 | Bei niedrigem I/Kreditkollaps bricht Transmission zusammen (S23: Lohn-Transmission 12% für Informelle) |
 | **Positive Feedback** | S08, S09, S13, S16, S20 | Herding, Info-Feedback, Adverse Selektion → explosive Dynamik |
 | **Erhaltungssätze** | S01, S02, S03, S04, S07 | Identitäten gelten exakt — aber nur unter korrekten Definitionen |
 | **Skalentrennung** | S10, S12, S13 | 10 Größenordnungen D-Unterschied → Finanz/Real permanent entkoppelt |
 | **Schwellenverhalten** | S08, S09, S11, S13, S16, S20, S22 | Phasenübergänge zwischen Effizienz, Bubble und Krise; Backward-Bending Phasengrenze γ≈η |
 | **Asymmetrie-Schutz** | S19, S20, S21 | Verlustaversion (S19) + Herding-Asymmetrie (S20) → "sticky consumption" |
 | **Hysterese/Scarring** | S21 | c*-Gedächtnis → Krisen hinterlassen permanente Spuren (Maß 0.315) |
-| **Klassen-Bifurkation** | S15, S18, S21, S22 | Information/Vermögen als Parameter erzeugt persistente Klassenschichtung |
+| **Klassen-Bifurkation** | S15, S18, S21, S22, S23 | Information/Vermögen als Parameter erzeugt persistente Klassenschichtung (S23: Wohlfahrtsverlust 34% vs. 1.3%) |
 
-| **Backward-Bending / Vorzeichen-Ambiguität** | S22 | SE+IE Vorzeichen ambig → Arbeitsangebotskurve in 88% des Parameterraums rückwärts gebogen |
-| **Jensen-Aggregation** | S22 | Konkaves L*(K) + Heterogenität → Aggregiertes Arbeitsangebot sinkt mit Wealth-Varianz |
+| **Backward-Bending / Vorzeichen-Ambiguität** | S22, S23 | SE+IE Vorzeichen ambig → Arbeitsangebotskurve in 88% des Parameterraums rückwärts gebogen; S23: Friction komprimiert Gini via B-B |
+| **Jensen-Aggregation** | S22, S23 | Konkaves L*(K) + Heterogenität → Aggregiertes Arbeitsangebot sinkt mit Wealth-Varianz; S23: Makro-neutral trotz Mikro-Verzerrung |
 
-> **Beobachtung 6.1 bestätigt:** Kein einziger Entscheidungskanal ist informationsunabhängig. Die Information I durchdringt jede Gleichung des Frameworks — von der Vermögensbilanz bis zur Konsumplanung.
+| **Fehlmigration / Poverty Trap** | S23 | V.1a(−)+L.1a(+): Gleichzeitig zu wenig Sparen + Fehlmigration bei niedrigem I → permanente Armutsfalle |
+
+> **Beobachtung 6.1 bestätigt:** Kein einziger Entscheidungskanal ist informationsunabhängig. Die Information I durchdringt jede Gleichung des Frameworks — von der Vermögensbilanz bis zur Konsumplanung bis zum Arbeitsmarkt.
