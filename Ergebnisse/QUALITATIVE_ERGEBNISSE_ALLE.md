@@ -1,6 +1,6 @@
-# Qualitative Ergebnisse — Alle Simulationen (S01–S27)
+# Qualitative Ergebnisse — Alle Simulationen (S01–S28)
 
-> **AxioContEcon**: 25 Simulationen, 171/171 Validierungen bestanden  
+> **AxioContEcon**: 26 Simulationen, 179/179 Validierungen bestanden  
 > Stichpunktartige Zusammenfassung der qualitativen Kernbefunde
 
 ---
@@ -258,6 +258,25 @@
 - Separation Preis-/Mengendynamik: III.3(q) + II.2(p) = Tâtonnement-Fixpunkt
 - Natürliche Selektion: Heterogene c₀ → Replikatordynamik; Marktkonzentration emergent
 
+### S28 — III.2 Portfoliodynamik (8/8 Val)
+- **Gleichung III.2 §6.6**: dθ_ik/dt = λ_θ·∂u/∂θ_ik + α_H·Σ_j A_ij·(θ_jk−θ_ik) + σ_θ·ξ_i — Drei-Term-Portfoliodynamik auf dem Simplex
+- **Markowitz-Konvergenz**: θ*=[0.625, 0.375, 0.000] exakt erreicht (err=0.000000); constrained QP via SLSQP
+- **Herding-Dominanz**: α_H=2.0 → Dispersion 0.243→0.003 (Consensus-Bildung via Netzwerk-Laplacian)
+- **Risikoaversion**: γ<2: Aktie 40.7%; γ>5: Aktie 30.9% → höheres γ = konservativeres Portfolio
+- **Noise-Trading**: σ_θ=0.5 → Dispersion 0.231 (idiosynkratische Heterogenität)
+- **Blasen-Crash**: Peak 0.657 → Trough 0.296 (−55% in 5 Zeiteinheiten durch Renditeschock)
+- **Netzwerk-Topologie**: Complete (0.016) > Star (0.015) > ER (0.016) > Ring (0.051) — Konnektivität bestimmt Consensus-Geschwindigkeit
+- **Neoklassischer Grenzfall**: Alle 4 Startpunkte → θ* (max err = 0.008); σ=0, α_H=0 = klassische Mean-Variance
+- **Effizienz**: Markowitz Sharpe 0.516; Strong Herding 0.549 — Herding individuell rational aber systemisch fragil
+- 8 Regime: Markowitz, Herding, Heterogenes γ, Noise, Blasen-Crash, Multi-Asset, Topologien, Neoklassisch
+
+**Mathematische Strukturen (S28):**
+- Drei-Ebenen-Parallele: III.2 = V-Architektur für Portfolios (Term1~V.1, Term2~V.3, Term3~Noise)
+- Laplacian-Diffusion: Herding = α_H·L·θ auf dem Simplex; Complete-Netz → max Consensus
+- Mean-Variance Optimierung: θ* = argmax(μᵀθ − γ/2·θᵀΣθ) auf Simplex; global stabil
+- Blasen als Herding-Instabilität: Exogener Schock bricht Herding-GG → Crash (−55%)
+- Effizienz-Herding Trade-off: Herding erhöht Sharpe (Varianzreduktion) aber erzeugt systemisches Risiko
+
 ---
 
 ## Übergreifende Muster
@@ -266,12 +285,12 @@
 |--------|-------------|-------------|
 | **I→0 Singularität** | S08, S09, S10, S13, S15, S16, S17, S18, S23 | Information→0 erzeugt Divergenz in Preisen, Potential, Flüssen, Konsum, Lohnwahrnehmung |
 | **Endogene Ungleichheit** | S01, S03, S15, S17, S18, S22, S23 | Heterogene Parameter → Gini wächst ohne externe Schocks (S23: Friction komprimiert via B-B) |
-| **Netzwerk-Equalisierung** | S20, S21, S25 | V.3/L.3 Herding senkt Gini um 95% — stärkster Gleichheitstreiber im Framework; S25: α=0.5 → Gini=0.000 |
+| **Netzwerk-Equalisierung** | S20, S21, S25, S28 | V.3/L.3 Herding senkt Gini um 95% — stärkster Gleichheitstreiber im Framework; S25: α=0.5 → Gini=0.000; S28: Herding-Laplacian Dispersion 0.243→0.003 |
 | **Geldpolitik-Impotenz** | S04, S12, S18, S23 | Bei niedrigem I/Kreditkollaps bricht Transmission zusammen (S23: Lohn-Transmission 12% für Informelle) |
-| **Positive Feedback** | S08, S09, S13, S16, S20, S24, S25, S27 | Herding, Info-Feedback, Adverse Selektion, Workaholic Treadmill, Overwork-Contagion, Gibrat-Wachstum → explosive Dynamik (S27: dq∝q transient) |
+| **Positive Feedback** | S08, S09, S13, S16, S20, S24, S25, S27, S28 | Herding, Info-Feedback, Adverse Selektion, Workaholic Treadmill, Overwork-Contagion, Gibrat-Wachstum → explosive Dynamik (S27: dq∝q transient; S28: Herding→Blase→Crash −55%) |
 | **Erhaltungssätze** | S01, S02, S03, S04, S07 | Identitäten gelten exakt — aber nur unter korrekten Definitionen |
 | **Skalentrennung** | S10, S12, S13 | 10 Größenordnungen D-Unterschied → Finanz/Real permanent entkoppelt |
-| **Schwellenverhalten** | S08, S09, S11, S13, S16, S20, S22 | Phasenübergänge zwischen Effizienz, Bubble und Krise; Backward-Bending Phasengrenze γ≈η |
+| **Schwellenverhalten** | S08, S09, S11, S13, S16, S20, S22, S28 | Phasenübergänge zwischen Effizienz, Bubble und Krise; Backward-Bending Phasengrenze γ≈η; S28: α_H-Phasenübergang Heterogenität→Consensus |
 | **Asymmetrie-Schutz** | S19, S20, S21, S24, S25 | Verlustaversion (S19) + Herding-Asymmetrie (S20) + Burnout (S24) + Normkonvergenz-Asymmetrie 2.50 (S25) → "sticky behavior" |
 | **Hysterese/Scarring** | S21, S24, S26 | c*-Gedächtnis (S21) + L*-Adaptation (S24, S26) → Scarring; S26: Gap +15.7h nach Statusdruck-Schock |
 | **Klassen-Bifurkation** | S15, S18, S21, S22, S23, S27 | Information/Vermögen als Parameter erzeugt persistente Klassenschichtung (S23: Wohlfahrtsverlust 34% vs. 1.3%); S27: Kostenheterogenität → Marktkonzentration (43.9% für effizienteste Firma) |
